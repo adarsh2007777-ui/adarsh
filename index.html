@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karma Mining 2026 | Freshers' Exclusive 12-Day Skill Marathon | µLearn PRC</title>
+  <meta name="description" content="Karma Mining is an exclusive 12-day challenge (16th-27th August 2026) for 1st-year students to explore µLearn, complete µJourney tasks, earn Karma points, and win top student & volunteer honors.">
+  <meta name="keywords" content="Karma Mining, Karma Marathon, µLearn PRC, Freshers Exclusive, 1st Year Students, µJourney, Karma Points, Peer Learning">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23FF5E1E' stroke='%23121316' stroke-width='6'/><circle cx='50' cy='50' r='36' fill='%23FFB703'/><text x='50' y='63' font-family='sans-serif' font-weight='900' font-size='44' text-anchor='middle' fill='%23121316'>µ</text></svg>">
+</head>
+<body>
+
+  <!-- Ambient Dynamic Interactive Background -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Top Announcement Bar / Ticker Marquee -->
+  <div class="top-ticker" aria-label="Event Highlights Marquee">
+    <div class="ticker-track">
+      <div class="ticker-item"><span>🔥 12-DAY SPRINT</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>📅 16TH AUGUST – 27TH AUGUST 2026</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>🎓 1ST-YEAR STUDENTS EXCLUSIVE</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>⚡ MINIMUM 3,000 KARMA TO QUALIFY</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>🏆 TOP STUDENT & TOP VOLUNTEER AWARDS</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>🚀 EXPLORE µJOURNEY WITH MENTORS</span><span class="ticker-dot"></span></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="ticker-item"><span>🔥 12-DAY SPRINT</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>📅 16TH AUGUST – 27TH AUGUST 2026</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>🎓 1ST-YEAR STUDENTS EXCLUSIVE</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>⚡ MINIMUM 3,000 KARMA TO QUALIFY</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>🏆 TOP STUDENT & TOP VOLUNTEER AWARDS</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item"><span>🚀 EXPLORE µJOURNEY WITH MENTORS</span><span class="ticker-dot"></span></div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand-wrapper" aria-label="Karma Mining µLearn PRC Home">
+        <img 
+          src="assets/mulearn_prc_logo.jpg" 
+          alt="µlearn PRC Logo" 
+          class="brand-logo-img"
+          onerror="if(!this.dataset.retried){this.dataset.retried='1'; this.src='../../brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/.user_uploaded/media_1790411310047.jpg';} else if(this.dataset.retried==='1'){this.dataset.retried='2'; this.src='file:///C:/Users/ADARSH S/.gemini/antigravity-ide/brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/.user_uploaded/media_1790411310047.jpg';} else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }"
+        />
+        <!-- Fallback brand icon if path moved -->
+        <div style="display:none; width:44px; height:44px; background:#000; border:2px solid #121316; border-radius:8px; align-items:center; justify-content:center; color:#fff; font-weight:900; font-family:'Bungee';">µL</div>
+        <div class="brand-text">
+          <span class="brand-title">KARMA MINING</span>
+          <span class="brand-sub">µLEARN PRC CHAPTER</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#structure" class="nav-link">Structure</a></li>
+          <li><a href="#mining-station" class="nav-link">⛏️ Mine Station</a></li>
+          <li><a href="#quests" class="nav-link">µJourney Quests</a></li>
+          <li><a href="#calculator" class="nav-link">Calculator</a></li>
+          <li><a href="#mentors" class="nav-link">Mentors</a></li>
+          <li><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li><a href="#prizes" class="nav-link">Prizes</a></li>
+          <li><a href="#leaderboard" class="nav-link">Leaderboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" title="Toggle Day / Night Mode" aria-label="Toggle Theme">🌙</button>
+        <button id="sound-toggle" class="icon-btn" title="Toggle Sound FX" aria-label="Toggle Audio Effects">🔊</button>
+        <button class="neo-btn neo-btn-primary neo-btn-sm desktop-only" onclick="openModal('register-modal')">
+          Join Sprint 🚀
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (First View Featuring Attached Photos & Interactive Stage) -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-text-content">
+          <div class="hero-badge-pill">
+            <span>✨ FRESHERS' EXCLUSIVE CHALLENGE</span>
+            <span style="font-weight: 900;">• 12 DAYS</span>
+          </div>
+
+          <h1 class="hero-title">
+            MINE YOUR <span id="hero-rotating-text" class="rotating-phrase-wrapper">KARMA.</span><br>
+            UNLEASH YOUR POTENTIAL.
+          </h1>
+
+          <p class="hero-description">
+            A 12-day transformative skill sprint designed exclusively for <strong>1st-year students</strong>. Explore the vibrant <strong>µLearn</strong> platform, complete practical quests from the <strong>µJourney</strong> catalog, conquer real challenges with dedicated volunteer mentors, and claim your place at the top!
+          </p>
+
+          <div class="hero-pillars-row">
+            <div class="hero-pillar-item">
+              <span class="icon">📅</span>
+              <span>16th – 27th August 2026</span>
+            </div>
+            <div class="hero-pillar-item">
+              <span class="icon">🎯</span>
+              <span>1st-Year Students</span>
+            </div>
+            <div class="hero-pillar-item">
+              <span class="icon">🪙</span>
+              <span>Min. 3,000 Karma to Qualify</span>
+            </div>
+            <div class="hero-pillar-item">
+              <span class="icon">🤝</span>
+              <span>1 Mentor Volunteer / Group</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <button class="neo-btn neo-btn-primary" onclick="openModal('register-modal')">
+              ⚡ Register Now
+            </button>
+            <a href="#mining-station" class="neo-btn neo-btn-gold">
+              ⛏️ Mine Karma Now
+            </a>
+            <a href="#quests" class="neo-btn neo-btn-outline">
+              🎮 Explore Quests
+            </a>
+          </div>
+
+          <!-- Live Countdown Box -->
+          <div class="countdown-box">
+            <div class="countdown-label">
+              <span>⏳ Challenge Kickoff Countdown</span>
+              <span class="font-mono">16 AUG 2026</span>
+            </div>
+            <div class="countdown-timer">
+              <div class="timer-cell">
+                <span class="timer-num" id="count-days">--</span>
+                <span class="timer-unit">Days</span>
+              </div>
+              <div class="timer-cell">
+                <span class="timer-num" id="count-hours">--</span>
+                <span class="timer-unit">Hours</span>
+              </div>
+              <div class="timer-cell">
+                <span class="timer-num" id="count-mins">--</span>
+                <span class="timer-unit">Mins</span>
+              </div>
+              <div class="timer-cell">
+                <span class="timer-num" id="count-secs">--</span>
+                <span class="timer-unit">Secs</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Stage (Featuring the Attached Artwork with 3D Tilt & Orbiting Badges) -->
+        <div class="hero-visual-stage">
+          
+          <!-- Orbiting 3D Golden µ-Coins -->
+          <div class="floating-element orbit-coin-1" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="100%" height="100%">
+              <circle cx="50" cy="50" r="46" fill="#FFB703" stroke="#121316" stroke-width="6"/>
+              <circle cx="50" cy="50" r="35" fill="#FFA200" stroke="#121316" stroke-width="2"/>
+              <text x="50" y="64" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="44" text-anchor="middle" fill="#121316">µ</text>
+            </svg>
+          </div>
+
+          <div class="floating-element orbit-coin-2" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="100%" height="100%">
+              <circle cx="50" cy="50" r="46" fill="#FF5E1E" stroke="#121316" stroke-width="6"/>
+              <circle cx="50" cy="50" r="35" fill="#FFB703" stroke="#121316" stroke-width="2"/>
+              <text x="50" y="64" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="44" text-anchor="middle" fill="#FFFFFF">µ</text>
+            </svg>
+          </div>
+
+          <!-- Neobrutalist Stickers -->
+          <div class="floating-element sticker-badge sticker-freshers">
+            ★ FRESHERS' EXCLUSIVE
+          </div>
+          <div class="floating-element sticker-badge sticker-karma">
+            ⚡ 3000 KP TARGET
+          </div>
+
+          <!-- Main Interactive Card with Real Uploaded Graphic -->
+          <div class="hero-main-card">
+            <div class="hero-card-header">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+              <span class="window-title">KARMA_MARATHON_POSTER.IMG</span>
+              <span style="font-size: 0.8rem; font-weight: 800; color: var(--brand-orange);">LIVE ⚡</span>
+            </div>
+
+            <div class="hero-poster-wrapper">
+              <img 
+                src="assets/karma_marathon_poster.jpg" 
+                alt="Karma Marathon Freshers Exclusive Poster Graphic" 
+                class="hero-poster-img"
+                id="main-poster-graphic"
+                onerror="if(!this.dataset.retried){this.dataset.retried='1'; this.src='../../brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/.user_uploaded/media_1790411310060.jpg';} else if(this.dataset.retried==='1'){this.dataset.retried='2'; this.src='file:///C:/Users/ADARSH S/.gemini/antigravity-ide/brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/.user_uploaded/media_1790411310060.jpg';}"
+              />
+            </div>
+
+            <div class="hero-card-footer">
+              <div>
+                <strong style="display:block; font-size: 0.95rem;">12 Days of Practical Learning</strong>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Guided by Volunteer Mentors</span>
+              </div>
+              <span class="badge-tag-orange">QUALIFY: 3,000 KP</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Metric Strip Ribbon -->
+  <section class="metrics-strip">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="metric-number">12</div>
+          <div class="metric-label">Sprint Days</div>
+          <div class="metric-sub">16th to 27th August 2026</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">3,000</div>
+          <div class="metric-label">Karma Qualification</div>
+          <div class="metric-sub">Minimum score to qualify</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">1 : 1</div>
+          <div class="metric-label">Dedicated Mentorship</div>
+          <div class="metric-sub">1 dedicated volunteer per group</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">2</div>
+          <div class="metric-label">Grand Prize Categories</div>
+          <div class="metric-sub">Top Student & Top Volunteer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Karma Mining Clicker Station (Gamified Arcade Experience) -->
+  <section class="mining-station-section" id="mining-station">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <div class="section-tag">🎮 ARCADE GAMIFICATION</div>
+        <h2 class="section-title">Interactive Karma Mining Station</h2>
+        <p class="section-subtitle">
+          Click the 3D Golden µ-Coin to mine simulated Karma Points! Experience the rush of accumulating karma with multi-tone audio feedback and critical jackpot drops!
+        </p>
+      </div>
+
+      <div class="mining-station-box">
+        <!-- Coin Clicker -->
+        <div class="mining-coin-wrapper" id="coin-fx-box">
+          <button id="arcade-coin-btn" class="arcade-coin-btn" title="Click to Mine Karma!" aria-label="Mine Karma Coin">
+            µ
+          </button>
+          <span style="font-family: var(--font-headline); font-weight: 800; font-size: 0.95rem; margin-top: 1rem; color: var(--text-primary);">
+            👆 CLICK TO MINE (+50 to +250 KP)
+          </span>
+        </div>
+
+        <!-- Mining Stats -->
+        <div class="mining-stats-display">
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">
+              TOTAL MINED KARMA IN SESSION
+            </span>
+            <div style="font-family: var(--font-display); font-size: 3.5rem; color: var(--brand-orange); line-height: 1.1;">
+              <span id="mined-karma-count">0</span> <span style="font-size: 1.5rem; color: var(--text-primary);">KP</span>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem;">
+              <span>Mining Streak:</span>
+              <span id="mining-streak-level" style="color: var(--brand-orange);">Lvl 1 Fresher Miner</span>
+            </div>
+            <div class="arcade-meter-wrap">
+              <div id="mining-meter-fill" class="arcade-meter-fill"></div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="#calculator" class="neo-btn neo-btn-primary neo-btn-sm">
+              🧮 Check 3,000 KP Roadmap
+            </a>
+            <a href="#quests" class="neo-btn neo-btn-outline neo-btn-sm">
+              Explore Official Quests
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectives & Event Mission -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">💡 PURPOSE & GOALS</div>
+        <h2 class="section-title">Why Join Karma Mining?</h2>
+        <p class="section-subtitle">
+          Designed specifically to welcome first-year students into practical engineering, community collaboration, and self-paced growth on µLearn.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="neo-card pillar-card">
+          <div class="pillar-icon-box icon-orange">🛠️</div>
+          <h3 class="pillar-title">Practical Skill Development</h3>
+          <p class="pillar-text">
+            Move beyond classroom theory. Complete hands-on tasks from the <strong>µJourney</strong> section spanning programming, modern web technologies, open-source git workflows, and essential soft skills.
+          </p>
+          <ul class="pillar-bullets">
+            <li><span class="bullet-check">✓</span> Tech tracks: Web, Git, Python & Linux</li>
+            <li><span class="bullet-check">✓</span> Soft skills: Public speaking & technical writing</li>
+            <li><span class="bullet-check">✓</span> Learn by doing with immediate peer feedback</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="neo-card pillar-card">
+          <div class="pillar-icon-box icon-gold">🧭</div>
+          <h3 class="pillar-title">Explore the µLearn Ecosystem</h3>
+          <p class="pillar-text">
+            Discover how the µLearn platform empowers students through interest groups, micro-credentials, hackathons, and a gamified learning ledger where every practical task earns Karma points.
+          </p>
+          <ul class="pillar-bullets">
+            <li><span class="bullet-check">✓</span> Discord channels & vibrant special interest groups</li>
+            <li><span class="bullet-check">✓</span> Verifiable proof-of-work on your public profile</li>
+            <li><span class="bullet-check">✓</span> Lifelong network of curious campus innovators</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="neo-card pillar-card">
+          <div class="pillar-icon-box icon-teal">🤝</div>
+          <h3 class="pillar-title">Dedicated Volunteer Support</h3>
+          <p class="pillar-text">
+            You're never alone in your journey. Participants are divided into small, collaborative groups with a passionate senior volunteer mentor assigned to guide, resolve doubts, and champion your growth.
+          </p>
+          <ul class="pillar-bullets">
+            <li><span class="bullet-check">✓</span> Zero intimidation: friendly 1st-year focus</li>
+            <li><span class="bullet-check">✓</span> Daily doubt resolution & task reviews</li>
+            <li><span class="bullet-check">✓</span> Team spirit where group success is celebrated</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Structure (The Operational Blueprint) -->
+  <section class="section-padding" id="structure" style="background-color: var(--bg-surface); border-top: var(--border-width) solid var(--border-color); border-bottom: var(--border-width) solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">⚙️ HOW IT WORKS</div>
+        <h2 class="section-title">Event Structure & Flow</h2>
+        <p class="section-subtitle">
+          Six foundational mechanics that make Karma Mining fair, thrilling, and profoundly rewarding for every participant.
+        </p>
+      </div>
+
+      <div class="structure-grid">
+        
+        <!-- Step 1 -->
+        <div class="neo-card structure-step-card">
+          <div class="step-number-tag">STEP 01</div>
+          <h3 class="step-card-title">Group Allocation</h3>
+          <p class="step-card-desc">
+            All registered 1st-year students will be organized into balanced peer groups to foster camaraderie, mutual problem solving, and healthy collaboration.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="neo-card structure-step-card">
+          <div class="step-number-tag">STEP 02</div>
+          <h3 class="step-card-title">Dedicated Volunteer Mentor</h3>
+          <p class="step-card-desc">
+            Each group is paired with an experienced volunteer mentor who provides continuous support, resolves conceptual doubts, and guides task submissions.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="neo-card structure-step-card">
+          <div class="step-number-tag">STEP 03</div>
+          <h3 class="step-card-title">µJourney Task Selection</h3>
+          <p class="step-card-desc">
+            Students choose tasks from the µJourney catalog tailored to their interests—whether beginner coding, design, open source, or communication.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="neo-card structure-step-card">
+          <div class="step-number-tag">STEP 04</div>
+          <h3 class="step-card-title">Earn Karma Points</h3>
+          <p class="step-card-desc">
+            Upon verifying completed tasks through public links (GitHub, Figma, live demo), Karma points are credited to each student's profile.
+          </p>
+        </div>
+
+        <!-- Step 5 (Special) -->
+        <div class="neo-card structure-step-card structure-special-card">
+          <div class="step-number-tag" style="background: var(--brand-gold); color: #121316;">QUALIFY</div>
+          <h3 class="step-card-title">The 3,000 Karma Mark</h3>
+          <p class="step-card-desc">
+            <strong>Mandatory Benchmark:</strong> A minimum of 3,000 Karma points must be accumulated during the 12-day window to qualify for certificates and grand awards.
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="neo-card structure-step-card">
+          <div class="step-number-tag">STEP 06</div>
+          <h3 class="step-card-title">Toppers & Volunteer Glory</h3>
+          <p class="step-card-desc">
+            The student with the highest Karma becomes the <strong>Student Topper</strong>. The volunteer whose group scores the highest aggregate Karma takes the <strong>Top Volunteer Prize</strong>!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive µJourney Quests Catalog & Search -->
+  <section class="section-padding" id="quests">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">🎮 QUEST EXPLORER</div>
+        <h2 class="section-title">Explore µJourney Tasks</h2>
+        <p class="section-subtitle">
+          Search and filter curated quests across coding, design, community, and leadership. Inspect rewards and plan your mining sprint!
+        </p>
+      </div>
+
+      <!-- Live Search Field -->
+      <div class="quest-search-wrapper">
+        <span class="search-icon-svg">🔍</span>
+        <input 
+          type="text" 
+          id="quest-search-field" 
+          class="quest-search-input" 
+          placeholder="Search quests: python, git, figma, portfolio, oss, blog..." 
+          aria-label="Search Quests"
+        />
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="quests-filter-bar">
+        <button class="filter-btn active" data-filter="all">🌟 All Quests</button>
+        <button class="filter-btn" data-filter="tech">💻 Tech & Dev</button>
+        <button class="filter-btn" data-filter="creative">🎨 Design & Creative</button>
+        <button class="filter-btn" data-filter="oss">🌐 Open Source</button>
+        <button class="filter-btn" data-filter="soft">🗣️ Soft Skills</button>
+      </div>
+
+      <!-- Quests Grid Container (Populated via JS) -->
+      <div class="quests-grid" id="quests-grid-container">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Karma Calculator & Progress Simulator -->
+  <section class="section-padding" id="calculator" style="background-color: var(--bg-surface); border-top: var(--border-width) solid var(--border-color); border-bottom: var(--border-width) solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">🧮 QUALIFICATION SIMULATOR</div>
+        <h2 class="section-title">Can You Hit 3,000 Karma?</h2>
+        <p class="section-subtitle">
+          Select the tasks you plan to conquer during the 12-day sprint. Watch the interactive gauge fill up and check whether you unlock the qualification threshold!
+        </p>
+      </div>
+
+      <div class="calculator-container">
+        
+        <!-- Left: Task Selection Checklist -->
+        <div class="neo-card">
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Select Your Planned Quests</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+            Click on any quest to add or remove it from your personal 12-day sprint plan:
+          </p>
+
+          <div class="calc-checklist-box" id="calc-tasks-list">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+
+        <!-- Right: Real-time Gauge & Milestone Status -->
+        <div class="neo-card calc-result-box">
+          <span style="font-family: var(--font-headline); font-weight: 800; font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted);">
+            YOUR ESTIMATED SPRINT SCORE
+          </span>
+
+          <div class="calc-dial-wrapper">
+            <svg class="progress-circle-svg" viewBox="0 0 200 200">
+              <circle class="circle-bg" cx="100" cy="100" r="90"></circle>
+              <circle class="circle-progress" id="calc-circle-progress" cx="100" cy="100" r="90"></circle>
+            </svg>
+            <div class="calc-dial-center">
+              <span class="calc-score-display" id="calc-current-score">0</span>
+              <span class="calc-target-label">/ 3,000 KP TARGET</span>
+            </div>
+          </div>
+
+          <div id="calc-status-badge" class="qualification-status-badge status-locked">
+            🔒 Need 3,000 KP to Qualify
+          </div>
+
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1.25rem; max-width: 320px;">
+            Qualifying unlocks your official <strong>µLearn Credential</strong> and enters you into the <strong>Student Topper</strong> race!
+          </p>
+
+          <button class="neo-btn neo-btn-primary neo-btn-sm" style="margin-top: 1.25rem;" onclick="openModal('register-modal')">
+            Lock In This Goal ➔
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Dedicated Volunteer Mentors Spotlight Section -->
+  <section class="section-padding" id="mentors">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">🤝 1-ON-1 GUIDANCE</div>
+        <h2 class="section-title">Meet Your Volunteer Mentors</h2>
+        <p class="section-subtitle">
+          Each group is guided by a dedicated volunteer senior to answer questions, guide your submissions, and cheer you all the way to 3,000+ Karma.
+        </p>
+      </div>
+
+      <div class="mentors-grid">
+        <!-- Mentor 1 -->
+        <div class="neo-card mentor-card">
+          <div class="mentor-avatar-box">👨‍💻</div>
+          <h3 class="mentor-name">Rahul Krishna</h3>
+          <span class="mentor-role">Web & Git Track Lead</span>
+          <p class="mentor-bio">Specialist in frontend development and open source repositories. Here to guide you through your first web deployment.</p>
+          <button class="neo-btn neo-btn-outline neo-btn-sm" onclick="openMentorDoubtModal('Web & Git')">
+            Ask Doubt 💬
+          </button>
+        </div>
+
+        <!-- Mentor 2 -->
+        <div class="neo-card mentor-card">
+          <div class="mentor-avatar-box">👩‍🎨</div>
+          <h3 class="mentor-name">Meera Pillai</h3>
+          <span class="mentor-role">Design & Creative Lead</span>
+          <p class="mentor-bio">UI/UX designer and typography geek. Ready to help review your Figma mockups, event posters, and design thinking.</p>
+          <button class="neo-btn neo-btn-outline neo-btn-sm" onclick="openMentorDoubtModal('Design & Creative')">
+            Ask Doubt 💬
+          </button>
+        </div>
+
+        <!-- Mentor 3 -->
+        <div class="neo-card mentor-card">
+          <div class="mentor-avatar-box">⚡</div>
+          <h3 class="mentor-name">Arjun Jayaraj</h3>
+          <span class="mentor-role">Python & Automation</span>
+          <p class="mentor-bio">Passionate coder focused on scripts, command line tools, and APIs. Assisting with bug fixes and code structure.</p>
+          <button class="neo-btn neo-btn-outline neo-btn-sm" onclick="openMentorDoubtModal('Python & Tech')">
+            Ask Doubt 💬
+          </button>
+        </div>
+
+        <!-- Mentor 4 -->
+        <div class="neo-card mentor-card">
+          <div class="mentor-avatar-box">🌟</div>
+          <h3 class="mentor-name">Pooja Menon</h3>
+          <span class="mentor-role">Soft Skills & Community</span>
+          <p class="mentor-bio">Helps freshers build confidence in public speaking, writing tech blogs, and networking effectively on Discord.</p>
+          <button class="neo-btn neo-btn-outline neo-btn-sm" onclick="openMentorDoubtModal('Soft Skills & Writing')">
+            Ask Doubt 💬
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12-Day Interactive Timeline Roadmap -->
+  <section class="section-padding" id="timeline" style="background-color: var(--bg-surface); border-top: var(--border-width) solid var(--border-color); border-bottom: var(--border-width) solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">🗓️ EVENT TIMELINE</div>
+        <h2 class="section-title">The 12-Day Challenge Journey</h2>
+        <p class="section-subtitle">
+          From 16th August to 27th August 2026. Every phase is paced to maximize learning, community bonding, and karma accumulation.
+        </p>
+      </div>
+
+      <div class="timeline-track">
+        
+        <!-- Day 1 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="neo-card timeline-card">
+            <span class="timeline-date-tag">DAY 01 • AUG 16</span>
+            <h3 class="timeline-title">Grand Kickoff & Group Allocation</h3>
+            <p class="timeline-desc">
+              Welcome orientation for all 1st-year participants. Groups are published, and students meet their dedicated volunteer mentor in their breakout circle.
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 2-4 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="neo-card timeline-card">
+            <span class="timeline-date-tag">DAY 02–04 • AUG 17–19</span>
+            <h3 class="timeline-title">Foundational Quests & First 1,000 KP</h3>
+            <p class="timeline-desc">
+              Beginners dive into Git/GitHub setup, HTML/CSS portfolio starts, and platform onboarding. Volunteers host daily evening syncs for questions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 5-8 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="neo-card timeline-card">
+            <span class="timeline-date-tag">DAY 05–08 • AUG 20–23</span>
+            <h3 class="timeline-title">Mid-Sprint Checkpoint & Domain Deep Dive</h3>
+            <p class="timeline-desc">
+              Students tackle higher-value quests: Python scripts, Figma UI design, and open-source contributions. Group Karma tallies begin to heat up!
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 9-11 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="neo-card timeline-card">
+            <span class="timeline-date-tag">DAY 09–11 • AUG 24–26</span>
+            <h3 class="timeline-title">The 3,000 KP Qualification Rush</h3>
+            <p class="timeline-desc">
+              Sprint mode! Students push to surpass the 3,000 Karma threshold. Volunteers assist with submission polishing, documentation, and peer endorsements.
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 12 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="neo-card timeline-card">
+            <span class="timeline-date-tag">DAY 12 • AUG 27</span>
+            <h3 class="timeline-title">Grand Finale & Submission Cutoff</h3>
+            <p class="timeline-desc">
+              Final task submissions close at 11:59 PM. The µLearn verification engine tallies all verified karma scores for students and volunteer groups.
+            </p>
+          </div>
+        </div>
+
+        <!-- Post Event -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="neo-card timeline-card" style="border-color: var(--brand-gold);">
+            <span class="timeline-date-tag" style="background: var(--brand-gold); color: #121316;">AUG 28+ • CEREMONY</span>
+            <h3 class="timeline-title">Winners Felicitation & Award Ceremony</h3>
+            <p class="timeline-desc">
+              The Top Student and Top Volunteer Group are awarded trophies, special prizes, and official honors before the entire µLearn campus community.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Prizes & Honors Showcase -->
+  <section class="section-padding" id="prizes">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">🏆 RECOGNITION & PRIZES</div>
+        <h2 class="section-title">Grand Honors for Champions</h2>
+        <p class="section-subtitle">
+          Honoring individual technical grit and outstanding peer leadership. Two prestigious awards await the highest performers!
+        </p>
+      </div>
+
+      <div class="prizes-grid">
+        
+        <!-- Prize 1: Top Student -->
+        <div class="neo-card prize-card prize-card-gold">
+          <div class="prize-ribbon-sticker">STUDENT CHAMPION</div>
+          <div class="prize-category-tag">🥇 INDIVIDUAL EXCELLENCE</div>
+          <h3 class="prize-card-title">Top Student Topper Award</h3>
+          
+          <div class="prize-image-frame">
+            <img 
+              src="assets/karma_trophy_prize.jpg" 
+              alt="3D Golden Trophy for Top Student Coder" 
+              class="prize-img"
+              onerror="if(!this.dataset.retried){this.dataset.retried='1'; this.src='../../brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/karma_trophy_prize_1790411738487.jpg';} else if(this.dataset.retried==='1'){this.dataset.retried='2'; this.src='file:///C:/Users/ADARSH S/.gemini/antigravity-ide/brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/karma_trophy_prize_1790411738487.jpg';}"
+            />
+          </div>
+
+          <p class="prize-card-desc">
+            Conferred upon the 1st-year student who accumulates the highest cumulative Karma points through verified task submissions across the 12-day challenge.
+          </p>
+
+          <ul class="prize-perks-list">
+            <li class="prize-perk-item"><span class="perk-icon">🏆</span> Exclusive µLearn PRC Grand Champion Trophy</li>
+            <li class="prize-perk-item"><span class="perk-icon">🎁</span> Premium Tech Goodies & Swag Kit</li>
+            <li class="prize-perk-item"><span class="perk-icon">📜</span> Official Certificate of High Distinction</li>
+            <li class="prize-perk-item"><span class="perk-icon">⚡</span> Direct Fast-track to µLearn Leadership Circles</li>
+          </ul>
+
+          <button class="neo-btn neo-btn-gold" onclick="openModal('register-modal')">
+            Compete for Top Student ➔
+          </button>
+        </div>
+
+        <!-- Prize 2: Top Volunteer -->
+        <div class="neo-card prize-card prize-card-teal">
+          <div class="prize-ribbon-sticker" style="background: var(--brand-teal); color: #121316;">BEST MENTOR</div>
+          <div class="prize-category-tag" style="color: var(--brand-teal-dark);">🎖️ LEADERSHIP & MENTORSHIP</div>
+          <h3 class="prize-card-title">Top Volunteer Mentor Award</h3>
+          
+          <div class="prize-image-frame">
+            <img 
+              src="assets/volunteer_badge.jpg" 
+              alt="3D Medal of Honor for Top Volunteer Mentor" 
+              class="prize-img"
+              onerror="if(!this.dataset.retried){this.dataset.retried='1'; this.src='../../brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/volunteer_badge_1790411776594.jpg';} else if(this.dataset.retried==='1'){this.dataset.retried='2'; this.src='file:///C:/Users/ADARSH S/.gemini/antigravity-ide/brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/volunteer_badge_1790411776594.jpg';}"
+            />
+          </div>
+
+          <p class="prize-card-desc">
+            Awarded to the volunteer mentor whose assigned group of freshers achieves the highest overall aggregate Karma points, showcasing extraordinary mentorship and team encouragement.
+          </p>
+
+          <ul class="prize-perks-list">
+            <li class="prize-perk-item"><span class="perk-icon">🎖️</span> Prestigious µLearn Leadership Medal of Honor</li>
+            <li class="prize-perk-item"><span class="perk-icon">🏅</span> Official Campus Recognition & Mentor Citation</li>
+            <li class="prize-perk-item"><span class="perk-icon">🌟</span> Volunteer Excellence Certificate for Career Portfolio</li>
+            <li class="prize-perk-item"><span class="perk-icon">🍕</span> Celebration Group Pizza Feast for Mentor & Team</li>
+          </ul>
+
+          <button class="neo-btn neo-btn-teal" onclick="openModal('register-modal')">
+            Support As Volunteer / Lead ➔
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Qualification Perk Banner -->
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <div class="neo-card" style="display: inline-flex; align-items: center; gap: 1.5rem; padding: 1.25rem 2rem; background: var(--bg-surface);">
+          <span style="font-size: 2rem;">🏅</span>
+          <div style="text-align: left;">
+            <strong style="display:block; font-size: 1.05rem;">All Qualifiers (3,000+ Karma Points)</strong>
+            <span style="font-size: 0.88rem; color: var(--text-secondary);">Earn verified Digital µLearn Completion Credentials & Exclusive Badge for LinkedIn / GitHub!</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Simulated Live Leaderboard -->
+  <section class="section-padding" id="leaderboard" style="background-color: var(--bg-surface); border-top: var(--border-width) solid var(--border-color); border-bottom: var(--border-width) solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">📊 STANDINGS PREVIEW</div>
+        <h2 class="section-title">Live Leaderboard Simulation</h2>
+        <p class="section-subtitle">
+          Keep track of top students and best-performing volunteer groups in real-time as points are submitted and verified.
+        </p>
+      </div>
+
+      <div class="leaderboard-board">
+        <!-- Switch Tabs -->
+        <div class="leaderboard-nav-tabs">
+          <button class="lb-tab-btn active" data-tab="students">🎓 Top Students</button>
+          <button class="lb-tab-btn" data-tab="volunteers">🤝 Top Volunteer Groups</button>
+          <button class="neo-btn neo-btn-outline neo-btn-sm" id="lb-refresh-btn" title="Simulate Live Karma Stream">
+            ⚡ Sync Points
+          </button>
+        </div>
+
+        <!-- Leaderboard Table Container -->
+        <div class="leaderboard-table-container">
+          <div class="lb-header-row">
+            <div>Rank</div>
+            <div>Participant / Group</div>
+            <div>Completed</div>
+            <div>Status</div>
+            <div style="text-align: right;">Total Karma</div>
+          </div>
+
+          <div id="lb-table-body">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">❓ QUESTIONS ANSWERED</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Everything first-year students and volunteers need to know before the 12-day sprint kicks off on August 16th.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Who is eligible to participate in Karma Mining?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Karma Mining is exclusively curated for <strong>1st-year students</strong> across all departments. Seniors participate as dedicated Volunteer Mentors to guide the groups throughout the 12 days.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the qualification benchmark for the challenge?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            To qualify for official certificates, badges, and the Student Topper title, participants must accumulate a <strong>minimum of 3,000 Karma points</strong> between 16th August and 27th August 2026.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What kind of tasks are available in the µJourney section?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            The µJourney section includes practical, beginner-friendly tasks covering web development (HTML/CSS/JS), Git & GitHub fundamentals, Python scripting, Figma UI design, open source documentation, and communication skills. You can choose tasks according to your personal interest!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How will volunteers guide us during the challenge?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Each group has a designated Volunteer Mentor. Your mentor will help you navigate the µLearn platform, recommend tasks matching your goals, troubleshoot errors or doubts, and review your submissions before final verification.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How are the winners decided?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            The student with the highest verified Karma points by 11:59 PM on 27th August 2026 will be crowned the <strong>Student Topper</strong>. The volunteer mentor whose assigned group generates the highest overall Karma points will receive the <strong>Top Volunteer Award</strong>!
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Call to Action Banner -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">READY TO MINE YOUR FIRST 3,000 KARMA?</h2>
+        <p class="cta-banner-desc">
+          Step into college with practical projects, verified GitHub commits, and an energetic circle of peers. Registration is free and open to all 1st-year students.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="neo-btn neo-btn-gold" style="font-size: 1.1rem; padding: 1rem 2rem;" onclick="openModal('register-modal')">
+            🚀 Register for Karma Mining 2026
+          </button>
+          <a href="#mining-station" class="neo-btn neo-btn-outline" style="background: #FFFFFF; color: #121316;">
+            ⛏️ Play Arcade Clicker
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Quick-Action HUD Controller -->
+  <aside class="floating-hud" aria-label="Quick Actions HUD">
+    <button class="hud-btn hud-btn-primary" onclick="mineKarmaShortcut()">
+      ⛏️ Mine (+50 KP)
+    </button>
+    <a href="#calculator" class="hud-btn">
+      🧮 3,000 KP Goal
+    </a>
+    <a href="#quests" class="hud-btn">
+      🎮 Quests
+    </a>
+    <button class="hud-btn" onclick="openModal('register-modal')">
+      🎟️ Get Pass
+    </button>
+    <a href="#hero" class="hud-btn" title="Back to Top">
+      ⬆️ Top
+    </a>
+  </aside>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div>
+          <div class="brand-wrapper" style="margin-bottom: 1rem;">
+            <img 
+              src="assets/mulearn_prc_logo.jpg" 
+              alt="µlearn PRC Logo" 
+              class="brand-logo-img"
+              style="height: 48px;"
+              onerror="if(!this.dataset.retried){this.dataset.retried='1'; this.src='../../brain/5ed6e54b-25ea-4744-9345-52895c8a17c3/.user_uploaded/media_1790411310047.jpg';} else { this.style.display='none'; }"
+            />
+            <div class="brand-text">
+              <span class="brand-title">KARMA MINING</span>
+              <span class="brand-sub">µLEARN PRC CHAPTER</span>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 320px;">
+            A student-led community empowering learners to discover, build, and lead through peer-to-peer micro-learning.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">About Karma Mining</a></li>
+            <li><a href="#structure">Event Structure</a></li>
+            <li><a href="#mining-station">Arcade Mining Station</a></li>
+            <li><a href="#quests">µJourney Quests</a></li>
+            <li><a href="#calculator">Karma Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Honors & Mentorship</h4>
+          <ul class="footer-links-list">
+            <li><a href="#mentors">Volunteer Guides</a></li>
+            <li><a href="#prizes">Top Student Prize</a></li>
+            <li><a href="#prizes">Top Volunteer Prize</a></li>
+            <li><a href="#leaderboard">Live Leaderboard</a></li>
+            <li><a href="#faq">Doubt Resolution FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">µLearn Community</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://mulearn.org" target="_blank" rel="noopener">Official µLearn Platform</a></li>
+            <li><a href="#hero">PRC Campus Chapter</a></li>
+            <li><a href="#register-modal" onclick="openModal('register-modal'); return false;">Join Discord Server</a></li>
+            <li><span style="font-weight: 700; color: var(--brand-orange);">Dates: Aug 16 – Aug 27, 2026</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 <strong>µLearn PRC Chapter</strong>. All rights reserved. Karma Mining & Marathon.
+        </div>
+        <div>
+          Built with ❤️ for 1st-Year Freshers • Driven by Peer Learning
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Registration & Pass Generator Modal -->
+  <div class="modal-overlay" id="register-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 id="modal-heading" style="font-size: 1.25rem;">⚡ Freshers' Registration</h3>
+        <button class="modal-close-btn" onclick="closeModal('register-modal')" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+          Register to be assigned your peer group and volunteer mentor for the 12-day challenge (16th–27th Aug 2026).
+        </p>
+
+        <form id="reg-form">
+          <div class="form-group">
+            <label class="form-label" for="reg-name">Full Name *</label>
+            <input type="text" id="reg-name" class="form-input" placeholder="e.g. Adarsh S." required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="reg-dept">Department *</label>
+              <select id="reg-dept" class="form-select" required>
+                <option value="CSE">Computer Science (CSE)</option>
+                <option value="AI & DS">Artificial Intelligence & DS</option>
+                <option value="ECE">Electronics & Comm (ECE)</option>
+                <option value="EEE">Electrical & Electronics</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="Civil">Civil Engineering</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-year">Year of Study</label>
+              <input type="text" id="reg-year" class="form-input" value="1st Year (Fresher)" disabled>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-email">College Email Address *</label>
+            <input type="email" id="reg-email" class="form-input" placeholder="student@college.edu" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-domain">Primary Learning Interest</label>
+            <select id="reg-domain" class="form-select">
+              <option value="Web & Python">Web Development & Python</option>
+              <option value="UI/UX & Design">UI/UX Design & Branding</option>
+              <option value="Open Source & Git">Open Source & Community</option>
+              <option value="IoT & Hardware">Robotics & Hardware</option>
+              <option value="All Tracks Explorer">All-Rounder Explorer</option>
+            </select>
+          </div>
+
+          <button type="submit" class="neo-btn neo-btn-primary" style="width: 100%; margin-top: 0.5rem;">
+            Generate My Sprint Pass 🎟️
+          </button>
+        </form>
+
+        <!-- Dynamic Holographic Fresher Pass Card -->
+        <div id="ticket-preview-box" class="ticket-preview">
+          <div class="ticket-header">
+            <div>
+              <div style="font-family: var(--font-display); font-size: 1rem; color: var(--brand-orange);">KARMA MINING 2026</div>
+              <div style="font-size: 0.75rem; font-weight: 700; color: #4A4D55;">OFFICIAL SPRINT PASS</div>
+            </div>
+            <div id="pass-unique-id" class="ticket-pass-id">KM-2026-894120</div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+            <div style="width: 50px; height: 50px; background: var(--brand-gold); border: 2px solid #121316; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+              🚀
+            </div>
+            <div>
+              <h4 id="pass-student-name" style="font-size: 1.15rem; color: #121316; margin-bottom: 0.2rem;">Adarsh S.</h4>
+              <div id="pass-student-dept" style="font-size: 0.8rem; font-weight: 700; color: #64748B;">CSE | 1st Year Freshers</div>
+              <div id="pass-student-domain" style="font-size: 0.75rem; color: var(--brand-orange); font-weight: 800;">Track: Web & Python</div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; background: #F3EFE6; border: 1.5px solid #121316; border-radius: 6px; padding: 0.6rem 0.85rem; font-size: 0.8rem; font-weight: 700;">
+            <span>📅 16–27 Aug 2026</span>
+            <span style="color: #059669;">Mentor: Group Allocating</span>
+          </div>
+
+          <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+            <button class="neo-btn neo-btn-gold neo-btn-sm" style="flex: 1;" onclick="window.print()">
+              🖨️ Print / Save Pass
+            </button>
+            <button class="neo-btn neo-btn-outline neo-btn-sm" onclick="closeModal('register-modal')">
+              Done ✓
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Quest Details Modal -->
+  <div class="modal-overlay" id="quest-modal" role="dialog" aria-modal="true" aria-labelledby="quest-modal-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 id="quest-modal-title" style="font-size: 1.25rem;">Quest Specification</h3>
+        <button class="modal-close-btn" onclick="closeModal('quest-modal')" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body" id="quest-modal-body">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Volunteer Mentor Doubt Modal -->
+  <div class="modal-overlay" id="mentor-modal" role="dialog" aria-modal="true" aria-labelledby="mentor-modal-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 id="mentor-modal-title" style="font-size: 1.25rem;">Ask Volunteer Mentor</h3>
+        <button class="modal-close-btn" onclick="closeModal('mentor-modal')" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="mentor-modal-domain" style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+          Ask your questions regarding this track. Your group volunteer mentor will respond directly!
+        </p>
+        <div class="form-group">
+          <label class="form-label" for="doubt-text">Your Question / Issue:</label>
+          <textarea id="doubt-text" class="form-input" rows="4" placeholder="Describe the task or error you need help with..."></textarea>
+        </div>
+        <button class="neo-btn neo-btn-primary" style="width:100%;" onclick="showToast('Doubt submitted to your Volunteer Mentor! 📨'); closeModal('mentor-modal');">
+          Send to Mentor ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="app.js"></script>
+</body>
+</html>
